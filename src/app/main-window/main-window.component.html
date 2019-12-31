@@ -9,7 +9,7 @@
 
 
 <header>
-    <select [(ngModel)]="selected" #myInput (change)="setMode()">
+    <select [(ngModel)]="selected" #myInput (change)="setMode()" [disabled]="intervalIsGoing">
         <ng-container *ngFor="let mode of modes">
             <option *ngFor="let m of mode | keys" [ngValue]="m">{{m.mode}}</option>
         </ng-container>

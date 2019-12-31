@@ -15,7 +15,7 @@ export class MainWindowComponent implements OnInit {
   delay = 2000;
   squares; modes: Mode[] = [];
   amount = 0; currentRandom = 0; userWins = 0; compWins = 0;
-  flag = true; disabled = true; winnerIs = false;
+  flag = true; disabled = true; winnerIs = false; intervalIsGoing = false;
   selected = null;
   name = ''; userName = 'Inkognito'; winner = ''; play = 'PLAY';
 
@@ -44,6 +44,7 @@ export class MainWindowComponent implements OnInit {
 
     this.winnerIs = false;
     this.disabled = true;
+    this.intervalIsGoing = true;
 
     this.resetTable();
 
@@ -103,7 +104,7 @@ export class MainWindowComponent implements OnInit {
       
       this.flag = true;
 
-    }, this.selected.delay)
+    }, 5)
 
   } 
 
@@ -125,6 +126,7 @@ export class MainWindowComponent implements OnInit {
     this.compWins = 0;
     this.disabled = false;
     this.winnerIs = true;
+    this.intervalIsGoing = false;
   }
 
   resetTable(){
