@@ -104,7 +104,7 @@ export class MainWindowComponent implements OnInit {
       
       this.flag = true;
 
-    }, 5)
+    }, this.selected.delay)
 
   } 
 
