@@ -1,0 +1,14 @@
+.list{
+    overflow: scroll;
+    height: 170px;
+}
+
+td{
+    border: 1px solid black;
+}
+
+p{
+    display: flex;
+    justify-content: space-between;
+} 
+

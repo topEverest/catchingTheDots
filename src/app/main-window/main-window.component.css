@@ -1,0 +1,35 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td{
+    height: 35px;
+    width: 35px;
+    border: 1px solid grey;
+}
+
+h4{
+    text-align: center;
+}
+
+.getIt{
+    background-color:  rgba(0, 0, 255, 0.568)
+}
+
+.youGet{
+    background-color: rgba(0, 128, 0, 0.568);
+}
+
+.compGets{
+    background-color: rgba(255, 0, 0, 0.568);
+}
+

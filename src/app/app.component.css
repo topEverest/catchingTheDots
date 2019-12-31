@@ -1,0 +1,7 @@
+app-main-window{
+    flex-direction: column;
+}
+
+app-info-list-window{
+    width: 250px;
+}

@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+
+
+
+<header>
+    <select [(ngModel)]="selected" #myInput (change)="setMode()">
+        <ng-container *ngFor="let mode of modes">
+            <option *ngFor="let m of mode | keys" [ngValue]="m">{{m.mode}}</option>
+        </ng-container>
+    </select>
+
+    <input type="text" placeholder="Enter your name" [(ngModel)]="userName">
+
+    <button (click)="start()" [disabled]="disabled">{{play}}</button>
+</header>
+
+<h4 class="head" *ngIf="winnerIs == false">Who will win?</h4>
+<h4 class="head" *ngIf="winnerIs == true">{{winner}} won!</h4>
+
+
+<table>
+    <tr *ngFor="let row of fields">
+      <td 
+        *ngFor="let col of fields" 
+        (click)="setGreen($event)" 
+        ></td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <header>
+    <select (change)="getFields(myInput.value)" #myInput>
+        <ng-container *ngFor="let mode of modes">
+            <option *ngFor="let m of mode | keys" value="{{m.delay}}">{{m.mode}}</option>
+        </ng-container>
+    </select>
+    <input type="text" placeholder="Enter your name">
+    <button (click)="start()">Play</button>
+</header>
+<h4 class="head">Message here</h4>
+<table>
+    <tr *ngFor="let row of fields">
+      <td 
+        *ngFor="let col of fields" 
+        (click)="changeColor($event)" 
+        ></td>
+    </tr>
+</table> -->
+
+
+
